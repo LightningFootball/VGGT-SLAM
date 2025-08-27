@@ -13,6 +13,8 @@ from vggt_slam.solver import Solver
 
 from vggt.models.vggt import VGGT
 
+import time
+
 
 parser = argparse.ArgumentParser(description="VGGT-SLAM demo")
 parser.add_argument("--image_folder", type=str, default="examples/kitchen/images/", help="Path to folder containing images")
@@ -131,6 +133,8 @@ def main():
         plt.ylabel("Focal lengths")
         plt.grid()
         plt.show()
+
+        time.sleep(10)
 
 
 if __name__ == "__main__":
